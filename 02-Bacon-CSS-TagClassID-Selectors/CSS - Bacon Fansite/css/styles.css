@@ -1,0 +1,31 @@
+:root
+
+/***** Tag selectors (broadly used) *****/ 
+h1 {
+    color: red;
+    font-size: 100px;
+}
+
+/* CSS class hover, properties when mouse hovers over */
+img:hover {
+    background-color: yellow;
+    height: 200px;
+    width: 200px;
+}
+
+/***** class selectors (most often used) *****/
+.bacon {
+    background-color: green;
+}
+.broccoli {
+    background-color: red;
+}
+
+.circular {
+    border-radius: 100%;
+}
+
+/***** ID selectors (barely used) *****/
+#heading1 {
+    color: blue;
+}

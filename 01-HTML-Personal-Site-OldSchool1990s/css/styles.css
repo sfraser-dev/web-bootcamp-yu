@@ -1,0 +1,32 @@
+/* external css code */
+/* css "globals" */
+:root {
+    --myblue: powderblue;
+    --mygray: gray;
+    --mydarkblue: #2B3467;
+}
+
+body {
+    background-color: var(--myblue);
+}
+
+hr {
+    background-color: var(--myblue);
+    border: none;
+    border-top: 5px dotted var(--mygray);
+    height: 0px;
+    width: 80%;
+}
+
+img {
+    height: 379px;
+    width: 301px;
+}
+
+h1 {
+    color: var(--mydarkblue);
+}
+
+h3 {
+    color: var(--mydarkblue);
+}

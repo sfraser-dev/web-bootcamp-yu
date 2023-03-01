@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Info</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <h1> Emmett Brown </h1>
+    <p> Hill Valley, California, USA </p>
+    <p> Mobile: 01234567890 </p>
+    <p> Email: back2the@future.com </p>
+    <hr size="2" noshade="">
+    <!-- method post to put the name attributes into the email body-->
+    <form action="mailto:myaddr@email.com" method="post" enctype="text/plain">
+        <label for="">Your name:</label>
+        <input type="text" name="yourName" id=""><br>
+        <label for="">Your email:</label>
+        <input type="email" name="yourEmail"><br>
+        <br>
+        <label for="">Your message:</label>
+        <textarea name="yourMessage" id="" cols="50" rows="20"></textarea><br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
