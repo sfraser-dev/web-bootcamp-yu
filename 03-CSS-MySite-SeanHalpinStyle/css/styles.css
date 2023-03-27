@@ -52,11 +52,18 @@ p {
 
 a {
     color : #11999E;
+    font-family: "Merriweather", sans-serif;
+    margin: 10px 10px 10px 10px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #80eef4;
 }
 
 hr {
     border: none;
-    border-top: 5px dotted #EAF6F6;
+    border-top: 5px dotted #838787;
     height: 0px;
     width: 80%;
 }
@@ -139,8 +146,9 @@ hr {
 }
 
 .copyright {
-    color : #EAF6F6;
+    color : #80eef4;
     font-size: 0.75rem;
+    padding: 20px 0px;
 }
 
 .contact-me-info {
