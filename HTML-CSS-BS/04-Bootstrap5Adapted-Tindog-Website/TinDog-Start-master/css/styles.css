@@ -1,0 +1,20 @@
+/* font-family: 'Ubuntu', sans-serif; */
+
+/********** TAG selectors **********/
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    line-height: 1.5;  /* spacing between lines (multiple, no units) */
+}
+
+/********** CLASS selectors **********/
+/* add padding to bs5's fluid container*/
+container-fluid{
+    padding: 3% 20%;
+}
+
+/********** ID selectors **********/
+#title{
+    background: #ff4c68
+}
+
