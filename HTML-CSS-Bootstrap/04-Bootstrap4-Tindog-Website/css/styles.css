@@ -7,6 +7,10 @@ h1 {
     line-height: 1.5;  /* spacing between lines (multiple, no units) */
 }
 
+body {
+    font-family: "Montserrat";  /* all text on page to this font */
+}
+
 /********** CLASS selectors **********/
 /* add padding to bs5's fluid container*/
 container-fluid{
@@ -15,6 +19,7 @@ container-fluid{
 
 /********** ID selectors **********/
 #title{
-    background: #ff4c68
+    background: #ff4c68;
+    color: #ffffff;
 }
 
