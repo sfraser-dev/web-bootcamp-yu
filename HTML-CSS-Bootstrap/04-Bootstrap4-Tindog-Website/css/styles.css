@@ -11,6 +11,12 @@ h1 {
     line-height: 1.5;  /* spacing between lines (multiple, no units) */
 }
 
+h2 {
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 3rem;
+    line-height: 1.5;   /* spacing between lines (multiple, no units) */
+}
+
 h3 {
     font-family: 'Montserrat-Bold', sans-serif;
     font-size: 1.5rem;
@@ -74,4 +80,17 @@ p {
 }
 .font-awesome-icon:hover {
     color: #ff4c68;
+}
+
+/*********  Testimonials Section (carosel) *********/
+#testimonials-section{
+    padding: 7% 15%;    /* 7% top & bottom, 15% right and left */
+    text-align: center;
+    background: #ff4c68;
+    color: #ffffff;
+}
+.testimonials-images{
+    width: 10%;
+    border-radius: 100%;    /* make a circle */
+    margin: 20px;
 }
