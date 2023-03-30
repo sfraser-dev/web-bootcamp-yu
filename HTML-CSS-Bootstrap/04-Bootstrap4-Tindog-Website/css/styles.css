@@ -16,18 +16,25 @@ h3 {
     font-size: 1.5rem;
 }
 
-p{
+p {
     color: #8f8f8f;
     font-family: "Montserrat-Light", sans-serif;
 }
 
-/********** CLASS selectors **********/
-/* add padding to bs5's fluid container, 3% top & bottom, 15% right and left*/
-.container-fluid{
-    padding: 3% 15%;
-}
+/********** CLASS selectors ("." - can be used with multiple HTML elements **********/
+/********** ID selectors ("#" - can only be used with one HTML element) **********/
 
-/* navigation bar */
+
+/********** Title setion of website (nav bar, container (with text-with-buttons), image *********/
+#title-section{
+    background: #ff4c68;
+    color: #ffffff;
+}
+/* BS fluid container */
+.title-container-fluid{
+    padding: 3% 15%;    /* 3% top & bottom, 15% right and left*/
+}
+/* BS Navigation Bar */
 .navbar {
     padding: 0 0 4.5rem 0;
 }
@@ -36,50 +43,35 @@ p{
     font-size: 2.25rem;
     font-weight: bold;
 }
-
-/*  0 top & bottom, 18 left and right*/
 .nav-item {
-    padding: 0 18px;
+    padding: 0 18px; /*  0 top & bottom, 18 left and right */
 }
-
 .nav-link{
     font-size: 1.2rem;
     font-family: "Monserrat-Light";
 }
-
-.download-button{
+.title-download-button{
     margin: 5% 3% 5% 0;
 }
-
 .title-image {
     width: 60%;
     transform: rotate(25deg);
 }
 
+
+/*********  Feature Section (3 bullet points in grid) *********/
+#features-section {
+    padding: 7% 15%;
+}
+/* BS grid */
 .feature-box {
     text-align: center;
     padding: 5%;
 }
-
 .font-awesome-icon {
     margin: 0 0 1.5rem 0;
     color: #ef8172;
 }
-
-
 .font-awesome-icon:hover {
     color: #ff4c68;
 }
-
-/********** ID selectors **********/
-#title{
-    background: #ff4c68;
-    color: #ffffff;
-}
-
-#features {
-    padding: 7% 15%;
-}
-
-
-
