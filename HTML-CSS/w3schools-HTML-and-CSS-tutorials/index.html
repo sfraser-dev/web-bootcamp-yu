@@ -6,7 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/styles.css"> <title>W3schools HTML tutorial</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>W3schools HTML tutorial</title>
 
 </head>
 
@@ -22,7 +23,7 @@
 
     <!-- image -->
     <figure>
-      <img src="https://www.w3schools.com/html/img_girl.jpg" width="500" height="600" alt="girl in jacket">
+      <img src="https://www.w3schools.com/html/img_girl.jpg" width="250" height="300" alt="girl in jacket">
       <figcaption> Image of a girl wearing a jacket (figure, img src, figcaption) </figcaption>
     </figure>
 
@@ -118,8 +119,10 @@
     <h1 style="background-color:hsl(9, 100%, 64%);">...(hsl)</h1>
     <h1 style="background-color:rgba(255, 99, 71, 0.5);">...(rgba)</h1>
     <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...(hsla)</h1>
+
+    <h1 style="color:blue;">A Blue Heading</h1>
   </section>
-  <h1 style="color:blue;">A Blue Heading</h1>
+  <hr style="border-top: 5px dotted #838787;">
 
   <!-- CSS -->
   <section style="background-color: antiquewhite;">
@@ -138,6 +141,7 @@
     <p style="border: 2px solid powderblue; margin-bottom:60px 0;"><strong>Margin</strong> defines
       the distance between adjacent elements
   </section>
+  <hr style="border-top: 5px dotted #838787;">
 
   <!-- Links -->
   <section style="background-color: #fff;">
@@ -172,6 +176,7 @@
     <br>
     <a href="#SectionColors">Use link to jump to a bookmark in the current page (id defines the bookmark)</a>
   </section>
+  <hr style="border-top: 5px dotted #838787;">
 
   <!-- Images -->
   <section style="background-color: antiquewhite;">
@@ -261,7 +266,7 @@
       Hello<br>
       Hello<br>
     </p>
-    <h4>Picture element</h4>
+    <h4>Picture element (set 'media' and picture elements will be responsive)</h4>
     <picture>
       <source media="(min-width: 650px)" srcset="https://www.w3schools.com/html/workplace.jpg">
       <source media="(min-width: 465px)" srcset="https://www.w3schools.com/html/img_car.jpg">
@@ -278,6 +283,7 @@
       or Safari 9.0 and earlier.
     </p>
   </section>
+  <hr style="border-top: 5px dotted #838787;">
 
   <!-- Tables -->
   <section style="background-color: #fff;">
@@ -321,17 +327,81 @@
 
     <p>To understand the example better, we have added borders to the table.</p>
   </section>
- 
+  <hr style="border-top: 5px dotted #838787;">
+
   <!-- Nav bar (HTML / CSS) -->
   <section style="background-color: #d4cecd;">
-  <h4>Nav bar HTML & CSS (styles.css)</h4>
-  <ul class="ul-nav-bar">
-    <li class="li-nav-bar"><a class="a-nav-bar" href="https://www.bbc.co.uk">Home</a></li>
-    <li class="li-nav-bar"><a class="a-nav-bar" href="https://www.bbc.co.uk/news">News</a></li>
-    <li class="li-nav-bar"><a class="a-nav-bar" href="https://www.bbc.co.uk/sport">Sport</a></li>
-    <li class="li-nav-bar"><a class="a-nav-bar" href="https://www.bbc.co.uk/weather">Weather</a></li>
-  </ul>
+    <h4>Nav bar HTML & CSS (styles.css)</h4>
+    <ul class="ul-nav-bar">
+      <li class="li-nav-bar"><a class="a-nav-bar" href="https://www.bbc.co.uk">Home</a></li>
+      <li class="li-nav-bar"><a class="a-nav-bar" href="https://www.bbc.co.uk/news">News</a></li>
+      <li class="li-nav-bar"><a class="a-nav-bar" href="https://www.bbc.co.uk/sport">Sport</a></li>
+      <li class="li-nav-bar"><a class="a-nav-bar" href="https://www.bbc.co.uk/weather">Weather</a></li>
+    </ul>
   </section>
+  <hr style="border-top: 5px dotted #838787;">
+
+  <!-- IFrame-->
+  <section style="background-color: #fff;">
+    <h4>IFrames</h4>
+    <p>
+      Common uses of iframes is for Google Maps, adverts, Youtube videos, social media, RSS feeds.
+      Seperation between my code and theirs is good as (1) no need for me to contsantly update.
+      May be some security risk, but OK with big companies.
+    </p>
+    <iframe src="https://www.cs.dartmouth.edu/~thc/" width="520px" height="360px" title="Iframe example"
+      name="iframe_a">
+    </iframe>
+    <br>
+    <a href="https://www-cs-faculty.stanford.edu/~knuth/" target="iframe_a">Go to another old-school website</a>
+  </section>
+  <hr style="border-top: 5px dotted #838787;">
+
+  <!-- Javascript -->
+  <section style="background-color: antiquewhite">
+    <h4>My First Javascript</h4>
+
+    <!-- simple hello world -->
+    <h5>Javascript instantly setting what appears in the paragraph</h5>
+    <script>
+      document.getElementById("p_script1").innerHTML = "JS says Hello World!";
+    </script>
+    <p id="p_script1"></p>
+
+    <!-- date and time in a paragraph via button-->
+    <h5>Javascript putting the date and time into a paragraph via button click</h5>
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+      Click me to change the text below to Date and Time.</button>
+    <p id="demo">Some initial text doing nothing</p>
+
+    <!-- change various paragraph attributes via button -->
+    <h5>Javascript changing paragraph attributes via button click</h5>
+    <script>
+      function myFunction(val_in) {
+        document.getElementById(val_in).style.fontSize = "25px";
+        document.getElementById(val_in).style.color = "red";
+        document.getElementById(val_in).style.backgroundColor = "yellow";
+      }
+    </script>
+    <button type="button" onclick="myFunction('p_script2')">
+      Click me to change the paragraph attributes</button>
+    <p id="p_script2">blah blah blah</p>
+    <br>
+
+    <!-- change image src via button -->
+    <h5>Javascript changing image source via button press </h5>
+    <script>
+      function myFunction2(val1, val2) {
+        document.getElementById(val1).src = val2;
+      }
+    </script>
+    <button type="button" onclick="myFunction2('js_img', 'https:\/\/www.w3schools.com/html/img_car.jpg')">
+      Click me to change the image</button>
+    <br>
+    <img id="js_img" src="https://www.w3schools.com/html/workplace.jpg" width="400" height="600">
+    <noscript>Sorry, your browser does not support JavaScript!</noscript>
+  </section>
+  <hr style="border-top: 5px dotted #838787;">
 
 </body>
 
