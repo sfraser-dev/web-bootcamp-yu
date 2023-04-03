@@ -54,7 +54,7 @@
       Oh, bring back my Bonnie to me.
     </pre>
   </section>
-  <hr style="border-top: 5px dotted #838787;">
+  <hr>
 
   <!-- styling (using CSS properties and CSS values) -->
   <!-- background color, text color, font, font size -->
@@ -81,7 +81,7 @@
     <p>This is <sub>subscripted</sub> text (sub)</p>
     <p>This is <sup>superscripted</sup> text (sup)</p>
   </section>
-  <hr style="border-top: 5px dotted #838787;">
+  <hr>
 
   <!-- Quotations -->
   <section style="background-color: antiquewhite;">
@@ -104,7 +104,7 @@
     <p><cite>The Scream (cite)</cite> by Edvard Munch. Painted in 1893.</p>
     <bdo dir="rtl">This text will be written from right to left (odb)</bdo>
   </section>
-  <hr style="border-top: 5px dotted #838787;">
+  <hr>
 
   <!-- Colors -->
   <section style="background-color: #fff;" id="SectionColors">
@@ -122,7 +122,7 @@
 
     <h1 style="color:blue;">A Blue Heading</h1>
   </section>
-  <hr style="border-top: 5px dotted #838787;">
+  <hr>
 
   <!-- CSS -->
   <section style="background-color: antiquewhite;">
@@ -141,7 +141,7 @@
     <p style="border: 2px solid powderblue; margin-bottom:60px;"><strong>Margin</strong> defines
       the distance between adjacent elements
   </section>
-  <hr style="border-top: 5px dotted #838787;">
+  <hr>
 
   <!-- Links -->
   <section style="background-color: #fff;">
@@ -176,7 +176,7 @@
     <br>
     <a href="#SectionColors">Use link to jump to a bookmark in the current page (id defines the bookmark)</a>
   </section>
-  <hr style="border-top: 5px dotted #838787;">
+  <hr>
 
   <!-- Images -->
   <section style="background-color: antiquewhite;">
@@ -284,15 +284,14 @@
     </p>
 
     <figure>
-      <img src="https://www.w3schools.com/html/img_girl.jpg"
-        style="max-width:40%;height:auto" alt="girl in jacket">
+      <img src="https://www.w3schools.com/html/img_girl.jpg" style="max-width:40%;height:auto" alt="girl in jacket">
       <figcaption>
         Img src max-width used for a bit of responsiveness, image will stay at its max width when
         viewport has space, but will scale down on smaller viewports.
       </figcaption>
     </figure>
   </section>
-  <hr style="border-top: 5px dotted #838787;">
+  <hr>
 
   <!-- Tables -->
   <section style="background-color: #fff;">
@@ -337,19 +336,19 @@
 
     <p>To understand the example better, we have added borders to the table.</p>
   </section>
-  <hr style="border-top: 5px dotted #838787;">
+  <hr>
 
   <!-- Nav bar (HTML / CSS) -->
   <section style="background-color: #d4cecd;">
-    <h4>Nav bar HTML & CSS (styles.css)</h4>
-    <ul class="ul-nav-bar">
-      <li class="li-nav-bar"><a class="a-nav-bar" href="https://www.bbc.co.uk">Home</a></li>
-      <li class="li-nav-bar"><a class="a-nav-bar" href="https://www.bbc.co.uk/news">News</a></li>
-      <li class="li-nav-bar"><a class="a-nav-bar" href="https://www.bbc.co.uk/sport">Sport</a></li>
-      <li class="li-nav-bar"><a class="a-nav-bar" href="https://www.bbc.co.uk/weather">Weather</a></li>
+    <h4>Nav bar HTML and CSS (styles.css)</h4>
+    <ul class="nav-bar-ul">
+      <li class="nav-bar-li"><a class="nav-bar-a" href="https://www.bbc.co.uk">Home</a></li>
+      <li class="nav-bar-li"><a class="nav-bar-a" href="https://www.bbc.co.uk/news">News</a></li>
+      <li class="nav-bar-li"><a class="nav-bar-a" href="https://www.bbc.co.uk/sport">Sport</a></li>
+      <li class="nav-bar-li"><a class="nav-bar-a" href="https://www.bbc.co.uk/weather">Weather</a></li>
     </ul>
   </section>
-  <hr style="border-top: 5px dotted #838787;">
+  <hr>
 
   <!-- IFrame-->
   <section style="background-color: #fff;">
@@ -359,13 +358,12 @@
       Seperation between my code and theirs is good as (1) no need for me to contsantly update.
       May be some security risk, but OK with big companies.
     </p>
-    <iframe src="https://www.cs.dartmouth.edu/~thc/" width="520" height="360" title="Iframe example"
-      name="iframe_a">
+    <iframe src="https://www.cs.dartmouth.edu/~thc/" width="520" height="360" title="Iframe example" name="iframe_a">
     </iframe>
     <br>
     <a href="https://www-cs-faculty.stanford.edu/~knuth/" target="iframe_a">Go to another old-school website</a>
   </section>
-  <hr style="border-top: 5px dotted #838787;">
+  <hr>
 
   <!-- Javascript -->
   <section style="background-color: antiquewhite">
@@ -408,11 +406,141 @@
     <button type="button" onclick="myFunction2('js_img', 'https:\/\/www.w3schools.com/html/img_car.jpg')">
       Click me to change the image</button>
     <br>
-    <img id="js_img" src="https://www.w3schools.com/html/workplace.jpg"
-      width="400" height="600" alt="girl wearing a jacket">
+    <img id="js_img" src="https://www.w3schools.com/html/workplace.jpg" width="400" height="600"
+      alt="girl wearing a jacket">
     <noscript>Sorry, your browser does not support JavaScript!</noscript>
   </section>
-  <hr style="border-top: 5px dotted #838787;">
+  <hr>
+
+  <!-- Forms, container needed for user input -->
+  <section style="background-color: #fff">
+    <h4>Forms (container needed for user input)</h4>
+
+    <form>
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname" value="John"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" value="Doe">
+    </form>
+    <p>Note that the default width of text input fields is 20 characters.</p>
+    <ul>
+      <li>We put input controls in form tags (a form containg various user input data)</li>
+      <li>"name" is the name the input control (refer to the control via its name)</li>
+      <li>The "value" is the data that control receives (can set an initial/default value)</li>
+      <li>Labels used to "label" the input control </li>
+      <li>The submit control just produces a submit button</li>
+    </ul>
+
+    <br>
+    <p>Choose your favorite Web language:</p>
+    <form>
+      <input type="radio" id="html" name="fav_language" value="HTML">
+      <label for="html">HTML</label><br>
+      <input type="radio" id="css" name="fav_language" value="CSS">
+      <label for="css">CSS</label><br>
+      <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+      <label for="javascript">JavaScript</label>
+    </form>
+
+    <br>
+    <h4>Checkboxes</h4>
+    <p>The <strong>input type="checkbox"</strong> defines a checkbox:</p>
+    <form action="/action_page.php">
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+      <label for="vehicle1"> I have a bike</label><br>
+      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+      <label for="vehicle2"> I have a car</label><br>
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+      <label for="vehicle3"> I have a boat</label><br><br>
+      <input type="submit" value="Submit">
+    </form>
+
+    <h4>Action</h4>
+    <form action="/action_page.php">
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname" value="John"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" value="Doe"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+
+    <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+    <p>
+      Notice that each input field must have a name attribute to be submitted.
+      If the name attribute is omitted, the value of the input field will not be sent at all.
+    </p>
+
+    <h4>The select Element</h4>
+    <p>The select element defines a drop-down list:</p>
+    <form action="/action_page.php">
+      <label for="cars">Choose a car:</label>
+      <select id="cars" name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+      </select>
+      <input type="submit">
+    </form>
+
+    <h4>The button Element</h4>
+    <button type="button" onclick="alert('Hello World!')">Click Me for an alert!</button>
+
+    <h4>Grouping Form Data with Fieldset</h4>
+    <p>The fieldset element is used to group related data in a form, and the legend element defines a caption for the
+      fieldset element.</p>
+    <form action="/action_page.php">
+      <fieldset>
+        <legend>Personalia:</legend>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="submit" value="Submit">
+      </fieldset>
+    </form>
+
+    <h4>The datalist Element</h4>
+    <p>The datalist element specifies a list of pre-defined options for an input element.</p>
+    <form action="/action_page.php">
+      <input list="browsers" name="browser">
+      <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+      </datalist>
+      <input type="submit">
+    </form>
+
+    <h4>Multiple (from file explorer)</h4>
+    <p>The multiple attribute specifies that the user is allowed to enter more than one value in an input field.</p>
+    <form action="/action_page.php">
+      <label for="files">Select files:</label>
+      <input type="file" id="files" name="files" multiple><br><br>
+      <input type="submit" value="Submit">
+    </form>
+    <p>To select multiple files, hold down the CTRL or SHIFT key while selecting.</p>
+
+
+    <!-- Auto complete -->
+    <p>The autocomplete attribute specifies whether or not an input field should have autocomplete enabled.</p>
+    <p>Fill in and submit the form, then reload the page to see how autocomplete works.</p>
+    <p>Notice that autocomplete is "on" for the form, but "off" for the e-mail field!</p>
+    <h4>Auto complete</h4>
+    <form action="/action_page.php" autocomplete="on">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname"><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" autocomplete="off"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+
+  </section>
+  <hr>
 
 
 
