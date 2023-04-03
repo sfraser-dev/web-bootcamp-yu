@@ -32,7 +32,7 @@
       This is a paragraph with styled color and a tooltip
     </p>
 
-    <!-- headings and paragraphs (br, pre (predfined == verbatim)) -->
+    <!-- headings and paragraphs (br, pre (preformated == verbatim)) -->
 
     <p>This is some text in a paragraph.</p>
     <h1>This is heading 1</h1>
@@ -183,7 +183,7 @@
     <h1 style="font-size:40px;">Images</h1>
     <h4>Image resize</h4>
     <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/07/01/2c/28.jpg" alt="Italian Trulli"
-      width="750px" height="350px">
+      width="750" height="350">
     <br>
     Image resized with width=XXXpx and height=XXXpx in pixels
     <br>
@@ -242,7 +242,7 @@
       <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://www.w3schools.com/w3images/cellphone.jpg">
       <area shape="circle" coords="337,300,44" alt="Coffee" href="https://www.w3schools.com/w3images/coffeehouse2.jpg">
     </map>
-    <h4>Background image</h4>
+    <h4>Background image of space</h4>
     <p style="background-image: url('https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/main_image_star-forming_region_carina_nircam_final-5mb.jpg');
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -270,7 +270,7 @@
     <picture>
       <source media="(min-width: 650px)" srcset="https://www.w3schools.com/html/workplace.jpg">
       <source media="(min-width: 465px)" srcset="https://www.w3schools.com/html/img_car.jpg">
-      <img src="https://www.w3schools.com/html/img_girl.jpg" style="width:auto;">
+      <img src="https://www.w3schools.com/html/img_girl.jpg" style="width:auto;" alt="girl wearing jacket">
     </picture>
     <p>Resize the browser to see different versions of the picture loading at different viewport sizes.
       The browser looks for the first source element where the media query matches the user's current viewport
@@ -282,6 +282,15 @@
     <p><strong>Note:</strong> The picture element is not supported in IE12 and earlier
       or Safari 9.0 and earlier.
     </p>
+
+    <figure>
+      <img src="https://www.w3schools.com/html/img_girl.jpg"
+        style="max-width:40%;height:auto" alt="girl in jacket">
+      <figcaption>
+        Img src max-width used for a bit of responsiveness, image will stay at its max width when
+        viewport has space, but will scale down on smaller viewports.
+      </figcaption>
+    </figure>
   </section>
   <hr style="border-top: 5px dotted #838787;">
 
@@ -291,13 +300,13 @@
     <table style="border: 1px solid black;">
       <caption>HTML Table Test</caption>
       <tr>
-        <td width="350" style="border: 1px solid black ;">
+        <td style="width:350px; border: 1px solid black ;">
           Foo
         </td>
-        <td width="80" style="border: 1px solid black ;">
+        <td style="width:80px; border: 1px solid black ;">
           Foo1
         </td>
-        <td width="65" style="border: 1px solid black ;">
+        <td style="width:65px; border: 1px solid black ;">
           Foo2
         </td>
       </tr>
@@ -349,7 +358,7 @@
       Seperation between my code and theirs is good as (1) no need for me to contsantly update.
       May be some security risk, but OK with big companies.
     </p>
-    <iframe src="https://www.cs.dartmouth.edu/~thc/" width="520px" height="360px" title="Iframe example"
+    <iframe src="https://www.cs.dartmouth.edu/~thc/" width="520" height="360" title="Iframe example"
       name="iframe_a">
     </iframe>
     <br>
@@ -398,10 +407,13 @@
     <button type="button" onclick="myFunction2('js_img', 'https:\/\/www.w3schools.com/html/img_car.jpg')">
       Click me to change the image</button>
     <br>
-    <img id="js_img" src="https://www.w3schools.com/html/workplace.jpg" width="400" height="600">
+    <img id="js_img" src="https://www.w3schools.com/html/workplace.jpg"
+      width="400" height="600" alt="girl wearing a jacket">
     <noscript>Sorry, your browser does not support JavaScript!</noscript>
   </section>
   <hr style="border-top: 5px dotted #838787;">
+
+
 
 </body>
 
