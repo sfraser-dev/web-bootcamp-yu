@@ -1,28 +1,27 @@
+hr {
+  border-top: 5px dotted #838787;
+}
 
-  hr {
-    border-top: 5px dotted #838787;
-  }
+ul.nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
 
-.nav-bar-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333333;
-  }
-  
-  .nav-bar-li {
-    float: left;
-  }
-  
-  .nav-bar-a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-  }
-  
-  .nav-bar-a:hover {
-    background-color: #111111;
-  }
+li.nav-bar {
+  float: left;
+}
+
+a.nav-bar {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+a.nav-bar:hover {
+  background-color: #111111;
+}
