@@ -129,6 +129,7 @@ body {
 }
 
 /********** Gallery sloths **********/
+/* From: https://code-boxx.com/responsive-image-gallery-html-css/  */
 /* (B) GALLERY WRAPPER */
 .gallery-sloths {
   /* (B1) GRID LAYOUT - 3 IMAGES PER ROW */
@@ -150,8 +151,8 @@ body {
   padding: 10px;
 
   /* (C2) COLORS */
-  border: 1px solid #ddd;
-  background: #fff;
+  /* border: 1px solid var(--bluedark); */
+  background: var(--bluemed);
 
   /* (C3) IMAGE RESIZE */
   /* cover | contain | fill | scale-down */
