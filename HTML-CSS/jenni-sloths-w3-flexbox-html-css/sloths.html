@@ -9,23 +9,23 @@
 
   <style>
     div.gallery {
-      /* border: 1px solid #ccc; */
+      border: 1px solid #ccc;
     }
     
     div.gallery:hover {
-      /* border: 1px solid #777; */
-      box-shadow: 10px 10px 5px lightblue;
+      border: 1px solid #777;
+      /* box-shadow: 10px 10px 5px lightblue; */
     }
     
     div.gallery img {
       width: 100%;
       height: auto;
     }
-    
-    * {
-      box-sizing: border-box;
-    }
-    
+   
+    div.desc {
+  padding: 15px;
+  text-align: center;
+  }
     .responsive {
       padding: 0 6px;
       float: left;
@@ -67,23 +67,21 @@
 
 <h2>Responsive Image Gallery</h2>
 
-<h4>Resize the browser window to see the effect.</h4>
-
 <div class="responsive">
   <div class="gallery">
-    <a target="_blank" href="https://www.chimuadventures.com/blog/wp-content/uploads/2016/02/shutterstock_157876628.jpg">
-      <img src="https://www.chimuadventures.com/blog/wp-content/uploads/2016/02/shutterstock_157876628.jpg"
+    <a target="_blank" href="./images/sloth-gallery/sloth1_w1280.png">
+      <img src="./images/sloth-gallery/sloth1_w1280.png"
       alt="another sloth pic" width="600" height="400">
     </a>
-    <!-- <div class="desc">Add a description of the image here</div> -->
+    <div class="desc">Add a description of the image here</div>
   </div>
 </div>
 
 
 <div class="responsive">
   <div class="gallery">
-    <a target="_blank" href="https://cdn2.wanderlust.co.uk/media/2301/magazine-young-3-toed-sloth-in-its-natural-habitat-amazon-river-peru-dreamstime_xl_40590660.jpg?width=460&slimmage=true">
-      <img src="https://cdn2.wanderlust.co.uk/media/2301/magazine-young-3-toed-sloth-in-its-natural-habitat-amazon-river-peru-dreamstime_xl_40590660.jpg?width=460&slimmage=true"
+    <a target="_blank" href="./images/sloth-gallery/sloth2_w1280.png">
+      <img src="./images/sloth-gallery/sloth2_w1280.png"
       alt="Forest" width="600" height="400">
     </a>
     <div class="desc">Add a description of the image here</div>
@@ -92,8 +90,8 @@
 
 <div class="responsive">
   <div class="gallery">
-    <a target="_blank" href="https://img.huffingtonpost.com/asset/58d2c4e31d0000cf3b7cfdd5.jpeg?cache=StvGTvkEgk&ops=1910_1000">
-      <img src="https://img.huffingtonpost.com/asset/58d2c4e31d0000cf3b7cfdd5.jpeg?cache=StvGTvkEgk&ops=1910_1000"
+    <a target="_blank" href="./images/sloth-gallery/sloth3_w1280.png">
+      <img src="./images/sloth-gallery/sloth3_w1280.png"
       alt="Northern Lights" width="600" height="400">
     </a>
     <div class="desc">Add a description of the image here</div>
@@ -102,8 +100,8 @@
 
 <div class="responsive">
   <div class="gallery">
-    <a target="_blank" href="https://rangerrick.org/wp-content/uploads/2018/06/sloth-RRJR_12.jpg">
-      <img src="https://rangerrick.org/wp-content/uploads/2018/06/sloth-RRJR_12.jpg"
+    <a target="_blank" href="./images/sloth-gallery/sloth4_w1280.png">
+      <img src="./images/sloth-gallery/sloth4_w1280.png"
       alt="Mountains" width="600" height="400">
     </a>
     <div class="desc">Add a description of the image here</div>
@@ -111,12 +109,6 @@
 </div>
 
 <div class="clearfix"></div>
-
-<div style="padding:6px;">
-  <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
-  <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
-</div>
-
 
 </body>
 </html>
