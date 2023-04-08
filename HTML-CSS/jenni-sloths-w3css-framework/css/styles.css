@@ -1,5 +1,5 @@
 /* header */
-.header {
+header {
   padding: 60px;
   text-align: center;
 }
@@ -36,12 +36,11 @@
 }
 
 /* Footer */
-.footer {
+footer {
   padding: 30px;
   text-align: center;
-  background: var(--color-footer)
 }
-.footer a {
+footer a {
   text-decoration: none;
 }
 .img-social-media {
