@@ -50,7 +50,9 @@ footer a {
   margin: 0 10px;
 }
 
-.gallery-sloths {
-  width: 100%;
-  height:auto;
+/* sloth gallery page */
+.gallery-sloths img{
+  width: 220px;
+  height: 150px;
+  margin-bottom: 20px;
 }
