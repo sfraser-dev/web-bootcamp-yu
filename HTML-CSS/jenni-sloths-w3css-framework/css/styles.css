@@ -1,0 +1,51 @@
+/* header */
+.header {
+  padding: 60px;
+  text-align: center;
+}
+
+/* images */
+.img-sloth-bag{
+  width: 300px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.img-gymnastics {
+  width: 256px;
+  height: 340px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.img-dr-kati{
+  width: 240px;
+  height: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.img-school-interuption{
+  width: 400px;
+  height: 225px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Footer */
+.footer {
+  padding: 30px;
+  text-align: center;
+  background: var(--color-footer)
+}
+.footer a {
+  text-decoration: none;
+}
+.img-social-media {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
