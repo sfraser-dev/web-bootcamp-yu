@@ -52,9 +52,32 @@ footer a {
 
 /* sloth gallery page */
 .gallery-sloths img{
-  /* width: 220px;
-  height: 150px; */
+  height: 150px; 
   max-width: 100%;
   height:150px;
   margin-bottom: 20px;
+}
+/********** Effects **********/
+/* Zoom On Hover*/
+.gallery-sloths img:hover {
+  z-index: 9;
+  transform: scale(1.3);
+  /* linear | ease | ease-in | ease-out | ease-in-out */
+  transition: transform ease 0.5s;
+  background-color: var(--hover-color);
+}
+/* Fullscreen Mode (see Javascript file)*/
+.gallery-sloths img.full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  object-fit: fit;
+  background: rgba(0, 0, 0, 0.7);
+}
+.gallery-sloths img.full:hover {
+  z-index: 999;
+  transform: none;
 }
