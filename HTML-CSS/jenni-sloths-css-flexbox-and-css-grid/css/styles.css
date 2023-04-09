@@ -116,14 +116,6 @@ footer a {
   margin: 0 10px;
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make 
-   the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .row, .navbar {   
-    flex-direction: column;
-  }
-}
-
 /********** Gallery Sloths **********/
 /* From: https://code-boxx.com/responsive-image-gallery-html-css/  */
 .gallery-sloths {
@@ -153,13 +145,6 @@ footer a {
   position: relative;
 }
 
-/* On Small Screens - 2 Image Per Row */
-@media only screen and (max-width: 600px) {
-  .gallery-sloths {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 /* Optional Zoom On Hover*/
 .gallery-sloths img:hover {
   z-index: 9;
@@ -180,4 +165,26 @@ footer a {
 .gallery-sloths img.full:hover {
   z-index: 999;
   transform: none;
+}
+
+/********** Responsive Layout **********/
+/* Viewports Less Than 768px */
+@media screen and (max-width: 768px) {
+  /* Flexbox: Stack The 2 Columns */
+  .flex-row, .navbar {   
+    flex-direction: column;
+  }
+  
+  /* Grid: On Small Screens - 2 Image Per Row */
+  .gallery-sloths {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Viewports Less Than 600px */
+@media screen and (max-width: 600px) {
+  /* Grid: On Small Screens - 1 Image Per Row */
+  .gallery-sloths {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
