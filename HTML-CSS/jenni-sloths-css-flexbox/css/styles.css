@@ -1,0 +1,190 @@
+/* CSS Variables */
+:root{
+  --bluedark: #03045E;
+  --bluemeddark: #0077B6;
+  --bluemed: #00B4D8;
+  --bluemedlight: #90E0EF;
+  --bluelight: #CAF0F8;
+  --white: #ffffff;
+  --black: #000000;
+  --graylight: #e6d6d6;
+  --graydark: #6e6e69;
+  --yellow: #f6ae2d;
+
+  --color-header: var(--bluelight);
+  --color-sidecol: var(--bluemed);
+  --color-maincol: var(--bluemedlight);
+  --color-footer: var(--bluelight);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+  background-color: var(--color-maincol);
+}
+
+header {
+  padding: 60px;
+  text-align: center;
+  background-color: var(--color-header);
+  color: var(--black)
+}
+
+nav {
+  display: flex;
+  background-color: var(--bluedark);
+}
+nav a {
+  color: var(--white);
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+nav a:hover:not(.active) {
+  background-color: var(--yellow);
+  color: var(--black)
+}
+nav .active {
+  background-color: var(--graydark);
+}
+
+/* Column Container */
+.flex-row {  
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+/* Sidebar (Left Column) */
+.flex-side-column {
+  flex: 30%;
+  background-color: var(--color-sidecol);
+  padding: 20px;
+}
+/* Main Column */
+.flex-main-column {
+  flex: 70%;
+  background-color: var(--color-maincol);
+  padding: 20px;
+}
+
+/* Non-Gallery Images */
+.img-sloth-bag{
+  width: 70%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.img-gymnastics {
+  width: 70%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.img-dr-kati{
+  width: 50%; 
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.img-school-interuption{
+  width: 70%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Footer */
+footer {
+  padding: 30px;
+  text-align: center;
+  background: var(--color-footer)
+}
+footer a {
+  text-decoration: none;
+}
+.footer-img-social-media {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
+
+/********** Gallery Sloths **********/
+/* From: https://code-boxx.com/responsive-image-gallery-html-css/  */
+.gallery-sloths {
+  /* Grid Layout - 3 Images Per Row */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+
+  /* Optional Width Restrict */
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Gallery Images */
+.gallery-sloths img {
+  width: 100%;
+  height: 150px; /* Optional */
+  padding: 10px;
+
+  /* Colors */
+  background: var(--bluemed);
+
+  /* Image Resize */
+  /* cover | contain | fill | scale-down */
+  object-fit: contain;
+  position: relative;
+}
+
+/* Optional Zoom On Hover*/
+.gallery-sloths img:hover {
+  z-index: 9;
+  transform: scale(1.3);
+  /* linear | ease | ease-in | ease-out | ease-in-out */
+  transition: transform ease 0.5s;
+  background-color: var(--yellow);
+}
+
+/* Fullscreen Mode */
+.gallery-sloths img.full {
+  position: fixed;
+  top: 0; left: 0; z-index: 999;
+  width: 100vw; height: 100vh;
+  object-fit: fit;
+  background: rgba(0, 0, 0, 0.7);
+}
+.gallery-sloths img.full:hover {
+  z-index: 999;
+  transform: none;
+}
+
+/********** Responsive Layout **********/
+/* Viewports Less Than 768px */
+@media screen and (max-width: 768px) {
+  /* Flexbox: Stack The 2 Columns */
+  .flex-row, .navbar {   
+    flex-direction: column;
+  }
+  
+  /* Grid: On Small Screens - 2 Image Per Row */
+  .gallery-sloths {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Viewports Less Than 600px */
+@media screen and (max-width: 600px) {
+  /* Grid: On Small Screens - 1 Image Per Row */
+  .gallery-sloths {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
