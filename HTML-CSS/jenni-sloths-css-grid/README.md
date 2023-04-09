@@ -1,7 +1,5 @@
-Responsive flexbox index.html based on: https://www.w3schools.com/csS/css3_flexbox_responsive.asp
-
-Responsive grid sloth gallery based on: https://code-boxx.com/responsive-image-gallery-html-css/
-This has a tiny bit of js to toggle the selected image fullscreen
+Responsive grids in both index.html (main page) and sloths.html (image gallery)
+The image gallery has a tiny bit of js to toggle the selected image fullscreen
 
 Responsive Flexbox navbar
 

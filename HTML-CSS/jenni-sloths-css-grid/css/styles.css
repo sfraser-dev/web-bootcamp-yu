@@ -1,11 +1,11 @@
 /* CSS Variables */
 :root {
-  --palette-dark: #03045E;
-  --palette-meddark: #0077B6;
-  --palette-med: #00B4D8;
-  --palette-medlight: #90E0EF;
-  --palette-light: #CAF0F8;
-  --hover-color: #f6ae2d;
+  --palette-dark: #56523e;
+  --palette-meddark: #A5B452;
+  --palette-med: #C8D96F;
+  --palette-medlight: #C4F7A1;
+  --palette-light: #9C946D;
+  --hover-color: #c0c8d8;
   --white: #ffffff;
   --black: #000000;
   --graylight: #e6d6d6;
@@ -52,23 +52,21 @@ nav a:hover {
 }
 
 /* Column Container */
-.index-flex-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  text-align: center;
+.index-grid-row {
+  display: grid;
+  /* Split Into 10 Column, Split 30/70% */
+  grid-template-columns: 3fr 7fr;
+  grid-gap: 20px;
 }
 
 /* Sidebar (Left Column) */
-.index-flex-side-column {
-  flex: 30%;
+.index-grid-side-column {
   background-color: var(--color-sidecol);
   padding: 20px;
 }
 
 /* Main Column */
-.index-flex-main-column {
-  flex: 70%;
+.index-grid-main-column {
   background-color: var(--color-maincol);
   padding: 20px;
 }
@@ -129,7 +127,8 @@ footer a {
   /* Grid Layout - 3 Images Per Row */
   display: grid;
   /* 3 Equal (Fr)actions Auto Calculating For Grid Gap */
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: 3fr 3fr 3fr;
   grid-gap: 20px;
 }
 
@@ -175,10 +174,12 @@ footer a {
 
 /********** Responsive Layout **********/
 /* Viewports More Than 992px */
-@media screen and (min-width: 993px){
+@media screen and (min-width: 993px) {
+
   /* Grid: On Small Screens - 2 Image Per Row */
   .gallery-sloths {
-    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
 }
@@ -186,14 +187,16 @@ footer a {
 /* Viewports Less Than 768px */
 @media screen and (max-width: 768px) {
 
-  /* Flexbox: Stack The 2 Columns */
-  .index-flex-row {
-    flex-direction: column;
+  /* Grid: Stack The 2 Columns */
+  .index-grid-row {
+    /* grid-template-columns: 100%; */
+    grid-template-columns: 1fr;
   }
 
   /* Grid: On Small Screens - 2 Image Per Row */
   .gallery-sloths {
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -204,9 +207,10 @@ footer a {
   nav {
     flex-direction: column;
   }
-  
+
   /* Grid: On Small Screens - 1 Image Per Row */
   .gallery-sloths {
-    grid-template-columns: repeat(1, 1fr);
+    /* grid-template-columns: repeat(1, 1fr); */
+    grid-template-columns: 1fr;
   }
 }
