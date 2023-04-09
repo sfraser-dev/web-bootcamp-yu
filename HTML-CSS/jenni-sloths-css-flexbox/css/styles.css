@@ -188,8 +188,7 @@ footer a {
 @media screen and (max-width: 768px) {
 
   /* Flexbox Main Page: Stack The 2 Columns */
-  .index-flex-row,
-  .navbar {
+  .index-flex-row {
     flex-direction: column;
   }
 
@@ -202,14 +201,13 @@ footer a {
 
 /* Viewports Less Than 600px */
 @media screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
 
   /* Flexbox Sloth Gallery 1 Per Row */
   .gallery-sloths-flex-column {
     flex: 100%;
     max-width: 100%;
-  }
-
-  nav {
-    flex: 100%;
   }
 }
