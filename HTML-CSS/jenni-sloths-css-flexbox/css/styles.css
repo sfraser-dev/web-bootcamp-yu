@@ -1,5 +1,5 @@
 /* CSS Variables */
-:root{
+:root {
   --palette-dark: #522555;
   --palette-meddark: #69306D;
   --palette-med: #A5668B;
@@ -38,47 +38,50 @@ nav {
   display: flex;
   background-color: var(--palette-dark);
 }
+
 nav a {
   color: var(--white);
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
 }
-nav a:hover:not(.active) {
+
+nav a:hover {
   background-color: var(--hover-color);
   color: var(--black)
 }
-nav .active {
-  background-color: var(--graydark);
-}
 
 /* Column Container */
-.flex-row {  
+.index-flex-row {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   text-align: center;
 }
+
 /* Sidebar (Left Column) */
-.flex-side-column {
+.index-flex-side-column {
   flex: 30%;
   background-color: var(--color-sidecol);
   padding: 20px;
 }
+
 /* Main Column */
-.flex-main-column {
+.index-flex-main-column {
   flex: 70%;
   background-color: var(--color-maincol);
   padding: 20px;
 }
 
 /* Non-Gallery Images */
-.img-sloth-bag{
+.img-sloth-bag {
   width: 70%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
+
 .img-gymnastics {
   width: 70%;
   height: auto;
@@ -86,14 +89,16 @@ nav .active {
   margin-right: auto;
   display: block;
 }
-.img-dr-kati{
-  width: 50%; 
+
+.img-dr-kati {
+  width: 50%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
-.img-school-interuption{
+
+.img-school-interuption {
   width: 70%;
   height: auto;
   margin-left: auto;
@@ -107,9 +112,11 @@ footer {
   text-align: center;
   background: var(--color-footer)
 }
+
 footer a {
   text-decoration: none;
 }
+
 .footer-img-social-media {
   width: 40px;
   height: 40px;
@@ -117,36 +124,31 @@ footer a {
 }
 
 /********** Gallery Sloths **********/
-/* From: https://code-boxx.com/responsive-image-gallery-html-css/  */
-.gallery-sloths {
-  /* Grid Layout - 3 Images Per Row */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+.gallery-sloths-flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px 4px;
+}
 
-  /* Optional Width Restrict */
-  max-width: 1000px;
-  margin: 0 auto;
-  overflow: hidden;
+.gallery-sloths-flex-column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 4px 4px;
 }
 
 /* Gallery Images */
-.gallery-sloths img {
+.gallery-sloths-flex-column img {
   width: 100%;
-  height: 150px; /* Optional */
+  height: auto;
   padding: 10px;
 
   /* Colors */
   background: var(--palette-med);
-
-  /* Image Resize */
-  /* cover | contain | fill | scale-down */
-  object-fit: contain;
-  position: relative;
 }
 
 /* Optional Zoom On Hover*/
-.gallery-sloths img:hover {
+.gallery-sloths-flex-column img:hover {
   z-index: 9;
   transform: scale(1.3);
   /* linear | ease | ease-in | ease-out | ease-in-out */
@@ -155,36 +157,59 @@ footer a {
 }
 
 /* Fullscreen Mode */
-.gallery-sloths img.full {
+.gallery-sloths-flex-column img.full {
   position: fixed;
-  top: 0; left: 0; z-index: 999;
-  width: 100vw; height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
   object-fit: fit;
   background: rgba(0, 0, 0, 0.7);
 }
-.gallery-sloths img.full:hover {
+
+.gallery-sloths-flex-column img.full:hover {
   z-index: 999;
   transform: none;
 }
 
 /********** Responsive Layout **********/
+/* Viewports More Than 768px */
+@media screen and (min-width: 769px) {
+
+  /* Flexbox Sloth Gallery 4 Per Row */
+  .gallery-sloths-flex-column {
+    flex: 25%;
+    max-width: 25%;
+  }
+}
+
 /* Viewports Less Than 768px */
 @media screen and (max-width: 768px) {
-  /* Flexbox: Stack The 2 Columns */
-  .flex-row, .navbar {   
+
+  /* Flexbox Main Page: Stack The 2 Columns */
+  .index-flex-row,
+  .navbar {
     flex-direction: column;
   }
-  
-  /* Grid: On Small Screens - 2 Image Per Row */
-  .gallery-sloths {
-    grid-template-columns: repeat(2, 1fr);
+
+  /* Flexbox Sloth Gallery 2 Per Row */
+  .gallery-sloths-flex-column {
+    flex: 50%;
+    max-width: 50%;
   }
 }
 
 /* Viewports Less Than 600px */
 @media screen and (max-width: 600px) {
-  /* Grid: On Small Screens - 1 Image Per Row */
-  .gallery-sloths {
-    grid-template-columns: repeat(1, 1fr);
+
+  /* Flexbox Sloth Gallery 1 Per Row */
+  .gallery-sloths-flex-column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  nav {
+    flex: 100%;
   }
 }
