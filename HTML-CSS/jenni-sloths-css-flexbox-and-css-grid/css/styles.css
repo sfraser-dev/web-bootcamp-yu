@@ -129,7 +129,9 @@ footer a {
   /* Grid Layout - 3 Images Per Row */
   display: grid;
   /* 3 Equal (Fr)actions Auto Calculating For Grid Gap */
-  grid-template-columns: repeat(3, 1fr);
+  /* Can Also Think Of "fr" as "FRee space" */
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
 }
 
@@ -178,7 +180,8 @@ footer a {
 @media screen and (min-width: 993px){
   /* Grid: On Small Screens - 2 Image Per Row */
   .gallery-sloths {
-    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
 }
@@ -193,7 +196,8 @@ footer a {
 
   /* Grid: On Small Screens - 2 Image Per Row */
   .gallery-sloths {
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -207,6 +211,7 @@ footer a {
   
   /* Grid: On Small Screens - 1 Image Per Row */
   .gallery-sloths {
-    grid-template-columns: repeat(1, 1fr);
+    /* grid-template-columns: repeat(1, 1fr); */
+    grid-template-columns: 1fr;
   }
 }
