@@ -1,5 +1,5 @@
 /* CSS Variables */
-:root{
+:root {
   --palette-dark: #03045E;
   --palette-meddark: #0077B6;
   --palette-med: #00B4D8;
@@ -38,47 +38,50 @@ nav {
   display: flex;
   background-color: var(--palette-dark);
 }
+
 nav a {
   color: var(--white);
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
 }
-nav a:hover:not(.active) {
+
+nav a:hover {
   background-color: var(--hover-color);
   color: var(--black)
 }
-nav .active {
-  background-color: var(--graydark);
-}
 
 /* Column Container */
-.flex-row {  
+.index-flex-row {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   text-align: center;
 }
+
 /* Sidebar (Left Column) */
-.flex-side-column {
+.index-flex-side-column {
   flex: 30%;
   background-color: var(--color-sidecol);
   padding: 20px;
 }
+
 /* Main Column */
-.flex-main-column {
+.index-flex-main-column {
   flex: 70%;
   background-color: var(--color-maincol);
   padding: 20px;
 }
 
 /* Non-Gallery Images */
-.img-sloth-bag{
+.img-sloth-bag {
   width: 70%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
+
 .img-gymnastics {
   width: 70%;
   height: auto;
@@ -86,14 +89,16 @@ nav .active {
   margin-right: auto;
   display: block;
 }
-.img-dr-kati{
-  width: 50%; 
+
+.img-dr-kati {
+  width: 50%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
-.img-school-interuption{
+
+.img-school-interuption {
   width: 70%;
   height: auto;
   margin-left: auto;
@@ -107,9 +112,11 @@ footer {
   text-align: center;
   background: var(--color-footer)
 }
+
 footer a {
   text-decoration: none;
 }
+
 .footer-img-social-media {
   width: 40px;
   height: 40px;
@@ -117,23 +124,19 @@ footer a {
 }
 
 /********** Gallery Sloths **********/
-/* From: https://code-boxx.com/responsive-image-gallery-html-css/  */
+/* Based on: https://code-boxx.com/responsive-image-gallery-html-css/  */
 .gallery-sloths {
   /* Grid Layout - 3 Images Per Row */
   display: grid;
+  /* 3 Equal (Fr)actions Auto Calculating For Grid Gap */
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-
-  /* Optional Width Restrict */
-  max-width: 1000px;
-  margin: 0 auto;
-  overflow: hidden;
 }
 
 /* Gallery Images */
 .gallery-sloths img {
   width: 100%;
-  height: 150px; /* Optional */
+  height: 150px;
   padding: 10px;
 
   /* Colors */
@@ -142,7 +145,6 @@ footer a {
   /* Image Resize */
   /* cover | contain | fill | scale-down */
   object-fit: contain;
-  position: relative;
 }
 
 /* Optional Zoom On Hover*/
@@ -157,24 +159,38 @@ footer a {
 /* Fullscreen Mode */
 .gallery-sloths img.full {
   position: fixed;
-  top: 0; left: 0; z-index: 999;
-  width: 100vw; height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
   object-fit: fit;
   background: rgba(0, 0, 0, 0.7);
 }
+
 .gallery-sloths img.full:hover {
   z-index: 999;
   transform: none;
 }
 
 /********** Responsive Layout **********/
+/* Viewports More Than 992px */
+@media screen and (min-width: 993px){
+  /* Grid: On Small Screens - 2 Image Per Row */
+  .gallery-sloths {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}
+
 /* Viewports Less Than 768px */
 @media screen and (max-width: 768px) {
+
   /* Flexbox: Stack The 2 Columns */
-  .flex-row, .navbar {   
+  .index-flex-row {
     flex-direction: column;
   }
-  
+
   /* Grid: On Small Screens - 2 Image Per Row */
   .gallery-sloths {
     grid-template-columns: repeat(2, 1fr);
@@ -183,6 +199,12 @@ footer a {
 
 /* Viewports Less Than 600px */
 @media screen and (max-width: 600px) {
+
+  /* Responsive Nav Bar */
+  nav {
+    flex-direction: column;
+  }
+  
   /* Grid: On Small Screens - 1 Image Per Row */
   .gallery-sloths {
     grid-template-columns: repeat(1, 1fr);
