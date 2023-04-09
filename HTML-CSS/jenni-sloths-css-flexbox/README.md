@@ -1,7 +1,5 @@
-Responsive flexbox in both index.html and sloths.html (image gallery)
+Responsive flexbox in both index.html (main page) and sloths.html (image gallery)
 The image gallery has a tiny bit of js to toggle the selected image fullscreen
-
-Simple non-responsive navbar that is copy/pasted into the two .html files
 
 Responsive Flexbox navbar
 
