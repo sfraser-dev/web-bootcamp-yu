@@ -82,9 +82,9 @@ p {
     color: #ff4c68;
 }
 
-/*********  Testimonials Section (carosel) *********/
+/*********  Testimonials Section (Carousel) *********/
 #testimonials-section{
-    padding: 7% 15%;    /* 7% top & bottom, 15% right and left */
+    
     text-align: center;
     background: #ff4c68;
     color: #ffffff;
@@ -93,4 +93,29 @@ p {
     width: 10%;
     border-radius: 100%;    /* make a circle */
     margin: 20px;
+}
+.carousel-item{
+    padding: 7% 15%;    /* 7% top & bottom, 15% right and left */
+}
+
+/********* Press (Cred Section) **********/
+#press {
+    background-color: #ff4c68;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.press-logo {
+    width: 15%;
+    margin: 20px 20px 50px 20px;
+}
+
+/********* Pricing Section (Cards) **********/
+#pricing {
+    padding: 100px;
+    text-align: center;
+}
+
+.pricing-column {
+    padding: 3% 2%;
 }
