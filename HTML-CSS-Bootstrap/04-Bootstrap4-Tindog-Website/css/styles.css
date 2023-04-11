@@ -2,19 +2,21 @@
 
 /********** TAG selectors **********/
 body {
-    font-family: "Montserrat";  /* all text on page to this font */
+    font-family: "Montserrat", sans-serif;
+    /* all text on page to this font */
 }
 
 h1 {
     font-family: 'Montserrat-Black', sans-serif;
     font-size: 3.3rem;
-    line-height: 1.5;  /* spacing between lines (multiple, no units) */
+    line-height: 1.5;
+    /* spacing between lines (multiple, no units) */
 }
 
 h2 {
     font-family: 'Montserrat-Bold', sans-serif;
     font-size: 3rem;
-    line-height: 1.5;   /* spacing between lines (multiple, no units) */
+    line-height: 1.5; /* spacing between lines (multiple, no units) */
 }
 
 h3 {
@@ -30,72 +32,93 @@ p {
 /********** CLASS selectors ("." - can be used with multiple HTML elements **********/
 /********** ID selectors ("#" - can only be used with one HTML element) **********/
 
-
 /********** Title setion of website (nav bar, container (with text-with-buttons), image *********/
-#title-section{
+#title{
     background: #ff4c68;
     color: #ffffff;
 }
+
 /* BS fluid container */
-.title-container-fluid{
-    padding: 3% 15%;    /* 3% top & bottom, 15% right and left*/
+.title-container-fluid {
+    /* 3% top & bottom, 15% right and left*/
+    padding: 3% 15% 7%;
 }
+
 /* BS Navigation Bar */
 .navbar {
     padding: 0 0 4.5rem 0;
 }
+
 .navbar-brand {
     font-family: Ubuntu;
     font-size: 2.25rem;
     font-weight: bold;
 }
+
 .nav-item {
-    padding: 0 18px; /*  0 top & bottom, 18 left and right */
+    padding: 0 18px;
+    /*  0 top & bottom, 18 left and right */
 }
-.nav-link{
+
+.nav-link {
     font-size: 1.2rem;
     font-family: "Monserrat-Light";
 }
-.title-download-button{
+
+.title-banner {
+    padding-top: 50px;
+}
+
+.title-download-button {
     margin: 5% 3% 5% 0;
 }
-.title-image {
-    width: 60%;
-    transform: rotate(25deg);
-}
 
+.title-image {
+    width: 70%;
+    transform: rotate(25deg);
+    position: absolute;
+}
 
 /*********  Feature Section (3 bullet points in grid) *********/
-#features-section {
+#features{
     padding: 7% 15%;
+    background-color: #fff;
+    position: relative;
 }
-/* BS grid */
+
+/* Bootstrap grid */
 .feature-box {
     text-align: center;
     padding: 5%;
 }
+
 .font-awesome-icon {
     margin: 0 0 1.5rem 0;
     color: #ef8172;
 }
+
 .font-awesome-icon:hover {
     color: #ff4c68;
 }
 
 /*********  Testimonials Section (Carousel) *********/
-#testimonials-section{
-    
+#testimonials{
+
     text-align: center;
     background: #ff4c68;
     color: #ffffff;
 }
-.testimonials-images{
+
+.testimonials-images {
     width: 10%;
-    border-radius: 100%;    /* make a circle */
+    border-radius: 100%;
+    /* make a circle */
     margin: 20px;
 }
-.carousel-item{
-    padding: 7% 15%;    /* 7% top & bottom, 15% right and left */
+
+.carousel-item {
+    padding: 7% 15%;
+    /* 7% top & bottom, 15% right and left */
 }
 
 /********* Press (Cred Section) **********/
@@ -118,4 +141,40 @@ p {
 
 .pricing-column {
     padding: 3% 2%;
+}
+
+/********** Call to action section **********/
+#cta {
+    background-color: #ff4c68;
+    color: #fff;
+    text-align: center;
+    padding: 7% 15%;
+}
+
+.cta-heading {
+    font-family: "Montserrat-Black", sans-serif;
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+
+/********** Footer **********/
+#footer {
+    text-align: center;
+    padding: 7% 15%;
+}
+
+.social-media-icons {
+    margin: 20px 10px;
+}
+
+/********** Media Queries **********/
+@media only screen and (max-width: 992px) {
+    .row {
+        text-align: center;
+    }
+
+    .title-image {
+        position: static;
+        transform: rotate(0);
+    }
 }

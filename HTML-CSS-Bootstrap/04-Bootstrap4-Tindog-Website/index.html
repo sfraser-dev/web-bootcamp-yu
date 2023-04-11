@@ -34,17 +34,17 @@
 
 <body>
 
-  <section id="title-section">
+  <section id="title">
 
-    <!-- bs fluid container
-    bs containers make padding and centering much easier
+    <!-- bootstrap fluid container
+    bootstrap containers make padding and centering much easier
     check fluid container out on codeply/stackblitz 
     fluid container maintains 100% width at different breakpoints/viewports
     (normal) container changes widths (jumps) at breakpoints/viewports (jarring to some?)-->
     <div class="title-container-fluid">
 
       <!-- nav bar with "toggler" responsive behaviour
-      Go to the BS documentation and see the examples with code. Adjust the browser window size to see
+      Go to the bootstrap documentation and see the examples with code. Adjust the browser window size to see
       how the example behaves. Can test/edit the example code in codeply/stackblitz too (before including
       it in my project)  -->
       <nav class="navbar navbar-expand-lg navbar-dark">
@@ -56,13 +56,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="">Contact</a>
+              <a class="nav-link" href="#cta">Download</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">Pricing</a>
+              <a class="nav-link" href="#features">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">Download</a>
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#press">Press</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact</a>
             </li>
           </ul>
         </div>
@@ -70,18 +79,18 @@
 
       <!-- Title -->
       <div class="row">
-
-        <!-- bs grid part 1-->
-        <div class="col-lg-6">
+        <!-- bootstrap grid part 1-->
+        <div class="title-banner col-lg-6">
           <h1>Meet new and interesting dogs nearby.</h1>
-          <!-- bs buttons -->
-          <button type="button" class="btn btn-dark btn-lg title-download-button"><i class="fa-brands fa-apple"></i>
+          <!-- bootstrap buttons -->
+          <button type="button" class="btn btn-dark btn-lg title-download-button"><i
+              class="fa-brands fa-apple"></i>
             Download</button>
           <button type="button" class="btn btn-outline-light btn-lg title-download-button"><i
               class="fa-brands fa-google-play"></i>
             Download</button>
         </div>
-        <!-- bs grid part 2-->
+        <!-- bootstrap grid part 2-->
         <div class="col-lg-6">
           <img class="title-image" src="images/iphone6.png" alt="iphone-mockup">
         </div>
@@ -91,7 +100,7 @@
 
 
   <!-- Features (3 bullet points) -->
-  <section id="features-section">
+  <section id="features">
 
     <div class="row">
       <div class="feature-box col-lg-4">
@@ -115,7 +124,7 @@
 
 
   <!-- Testimonial Carousel -->
-  <section id="testimonials-section">
+  <section id="testimonials">
 
     <div id="testimonial-carousel" class="carousel slide" data-ride="false">
       <div class="carousel-inner">
@@ -190,7 +199,7 @@
             <button class="btn btn-lg btn-block btn-dark">Sign Up</button>
           </div>
         </div>
-        </div>
+      </div>
 
       <!-- Card 3 -->
       <div class="pricing-column col-lg-4 col-md-6">
@@ -213,25 +222,29 @@
 
 
   <!-- Call to Action -->
-
   <section id="cta">
-
-    <h3>Find the True Love of Your Dog's Life Today.</h3>
-    <button type="button">Download</button>
-    <button type="button">Download</button>
-
+    <h3 class="cta-heading">Find the True Love of Your Dog's Life Today.</h3>
+    <button type="button" class="btn btn-dark btn-lg title-download-button"><i class="fa-brands fa-apple"></i>
+      Download</button>
+    <button type="button" class="btn btn-outline-light btn-lg title-download-button"><i
+        class="fa-brands fa-google-play"></i>
+      Download</button>
   </section>
 
-
   <!-- Footer -->
-
   <footer id="footer">
-
-    <p>© Copyright TinDog</p>
-
+    <p>
+      <a href="https://www.facebook.com">
+        <i class="social-media-icons fa-brands fa-square-facebook fa-2xl" title="facebook"></i></a>
+      <a href="mailto:john@smith.com">
+        <i class="social-media-icons fa-solid fa-envelope fa-2xl"></i></a>
+      <a href="https://www.twitter.com">
+        <i class="social-media-icons fa-brands fa-square-twitter fa-2xl"></i></a>
+      <a href="https://www.linkedin.com">
+        <i class="social-media-icons fa-brands fa-linkedin fa-2xl"></i></a>
+    </p>
+    <p>© Copyright TinDog 2023</p>
   </footer>
 
-
 </body>
-
 </html>
