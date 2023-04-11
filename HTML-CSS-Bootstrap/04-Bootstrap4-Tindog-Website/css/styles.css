@@ -44,6 +44,23 @@ p {
     padding: 7% 15%;
 }
 
+/* Sections */
+.colored-section{
+    background-color: var(--palette-main-background);
+    color: var(--palette-white);
+}
+
+.white-section {
+    background-color: var(--palette-white);
+}
+
+.hoverable-icon {
+    color: var(--palette-icon);
+}
+.hoverable-icon:hover {
+    color: var(--palette-main-background);
+}
+
 /********** Title setion of website (nav bar, container (with text-with-buttons)), image *********/
 /* Bootstrap Navigation Bar */
 .navbar {
@@ -65,14 +82,9 @@ p {
     font-family: "Monserrat-Light";
 }
 
-#title {
-    background: var(--palette-main-background);
-    color: var(--palette-white);
-    text-align: left;
-}
-
-#title.container-fluid {
+#title .container-fluid {
     padding: 3% 15% 7%;
+    text-align: left;
 }
 
 .title-banner {
@@ -92,7 +104,6 @@ p {
 
 /*********  Feature Section (3 bullet points in grid) *********/
 #features {
-    background-color: var(--palette-white);
     position: relative;
 }
 
@@ -103,11 +114,6 @@ p {
 
 .font-awesome-icon {
     margin: 0 0 1.5rem 0;
-    color: var(--palette-icon);
-}
-
-.font-awesome-icon:hover {
-    color: var(--palette-main-background);
 }
 
 /* refactor */
@@ -116,11 +122,6 @@ p {
 }
 
 /*********  Testimonials Section (Carousel) *********/
-#testimonials {
-    background: var(--palette-main-background);
-    color: var(--palette-white);
-}
-
 .testimonials-images {
     width: 10%;
     border-radius: 100%;
@@ -136,7 +137,6 @@ p {
 
 /********* Press (Cred Section) **********/
 #press {
-    background-color: var(--palette-main-background);
     padding-bottom: 3%;
 }
 
@@ -166,19 +166,9 @@ p {
     font-size: 1.5rem;
 }
 
-/********** Call to action section **********/
-#cta {
-    background-color: var(--palette-main-background);
-    color: var(--palette-white);
-}
-
 /********** Footer **********/
 .social-media-icons {
     margin: 20px 10px;
-    color: var(--palette-icon);
-}
-.social-media-icons:hover {
-    color: var(--palette-main-background)
 }
 
 /********** Media Queries **********/
