@@ -1,50 +1,51 @@
-/* font-family: 'Ubuntu', sans-serif; */
-
-/********** TAG selectors **********/
-body {
-    font-family: "Montserrat", sans-serif;
-    /* all text on page to this font */
+:root {
+    --palette-icon: #ef8172;
+    --palette-paragraph-text: #8f8f8f;
+    --palette-main-background: #ff4c68;
+    --palette-white: #fff;
 }
 
-h1 {
+body {
+    /* all text on page to this font */
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat-Bold', sans-serif;
+}
+
+p {
+    color: var(--palette-paragraph-text);
+}
+
+/* Headings (refactoring) */
+.big-heading {
     font-family: 'Montserrat-Black', sans-serif;
-    font-size: 3.3rem;
+    font-size: 3.5rem;
     line-height: 1.5;
     /* spacing between lines (multiple, no units) */
 }
 
-h2 {
-    font-family: 'Montserrat-Bold', sans-serif;
+.section-heading {
     font-size: 3rem;
-    line-height: 1.5; /* spacing between lines (multiple, no units) */
+    line-height: 1.5;
+    /* spacing between lines (multiple, no units) */
 }
 
-h3 {
-    font-family: 'Montserrat-Bold', sans-serif;
-    font-size: 1.5rem;
+/* Bootstrap fluid container */
+.container-fluid {
+    /* 7% top & bottom, 15% right and left*/
+    padding: 7% 15%;
 }
 
-p {
-    color: #8f8f8f;
-    font-family: "Montserrat-Light", sans-serif;
-}
-
-/********** CLASS selectors ("." - can be used with multiple HTML elements **********/
-/********** ID selectors ("#" - can only be used with one HTML element) **********/
-
-/********** Title setion of website (nav bar, container (with text-with-buttons), image *********/
-#title{
-    background: #ff4c68;
-    color: #ffffff;
-}
-
-/* BS fluid container */
-.title-container-fluid {
-    /* 3% top & bottom, 15% right and left*/
-    padding: 3% 15% 7%;
-}
-
-/* BS Navigation Bar */
+/********** Title setion of website (nav bar, container (with text-with-buttons)), image *********/
+/* Bootstrap Navigation Bar */
 .navbar {
     padding: 0 0 4.5rem 0;
 }
@@ -57,12 +58,21 @@ p {
 
 .nav-item {
     padding: 0 18px;
-    /*  0 top & bottom, 18 left and right */
 }
 
 .nav-link {
     font-size: 1.2rem;
     font-family: "Monserrat-Light";
+}
+
+#title {
+    background: var(--palette-main-background);
+    color: var(--palette-white);
+    text-align: left;
+}
+
+#title.container-fluid {
+    padding: 3% 15% 7%;
 }
 
 .title-banner {
@@ -74,39 +84,41 @@ p {
 }
 
 .title-image {
-    width: 70%;
+    width: 60%;
     transform: rotate(25deg);
     position: absolute;
+    left: 100px;
 }
 
 /*********  Feature Section (3 bullet points in grid) *********/
-#features{
-    padding: 7% 15%;
-    background-color: #fff;
+#features {
+    background-color: var(--palette-white);
     position: relative;
 }
 
 /* Bootstrap grid */
 .feature-box {
-    text-align: center;
     padding: 5%;
 }
 
 .font-awesome-icon {
     margin: 0 0 1.5rem 0;
-    color: #ef8172;
+    color: var(--palette-icon);
 }
 
 .font-awesome-icon:hover {
-    color: #ff4c68;
+    color: var(--palette-main-background);
+}
+
+/* refactor */
+.feature-title {
+    font-size: 1.5rem;
 }
 
 /*********  Testimonials Section (Carousel) *********/
-#testimonials{
-
-    text-align: center;
-    background: #ff4c68;
-    color: #ffffff;
+#testimonials {
+    background: var(--palette-main-background);
+    color: var(--palette-white);
 }
 
 .testimonials-images {
@@ -116,15 +128,15 @@ p {
     margin: 20px;
 }
 
-.carousel-item {
-    padding: 7% 15%;
-    /* 7% top & bottom, 15% right and left */
+/* refactor */
+.testimonals-text {
+    font-size: 3rem;
+    line-height: 1.5;
 }
 
 /********* Press (Cred Section) **********/
 #press {
-    background-color: #ff4c68;
-    text-align: center;
+    background-color: var(--palette-main-background);
     padding-bottom: 3%;
 }
 
@@ -136,35 +148,37 @@ p {
 /********* Pricing Section (Cards) **********/
 #pricing {
     padding: 100px;
-    text-align: center;
 }
 
 .pricing-column {
     padding: 3% 2%;
 }
 
-/********** Call to action section **********/
-#cta {
-    background-color: #ff4c68;
-    color: #fff;
-    text-align: center;
-    padding: 7% 15%;
+/* refactor */
+.price-text-header {
+    font-size: 3rem;
+    line-height: 1.5;
+    /* spacing between lines (multiple, no units) */
 }
 
-.cta-heading {
-    font-family: "Montserrat-Black", sans-serif;
-    font-size: 3.5rem;
-    line-height: 1.5;
+/* refactor */
+.breed-header {
+    font-size: 1.5rem;
+}
+
+/********** Call to action section **********/
+#cta {
+    background-color: var(--palette-main-background);
+    color: var(--palette-white);
 }
 
 /********** Footer **********/
-#footer {
-    text-align: center;
-    padding: 7% 15%;
-}
-
 .social-media-icons {
     margin: 20px 10px;
+    color: var(--palette-icon);
+}
+.social-media-icons:hover {
+    color: var(--palette-main-background)
 }
 
 /********** Media Queries **********/
@@ -176,5 +190,10 @@ p {
     .title-image {
         position: static;
         transform: rotate(0);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 250px;
+        height: 490px;
     }
 }
